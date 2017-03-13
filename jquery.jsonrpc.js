@@ -188,6 +188,7 @@
           cache: options.cache,
           headers: options.headers,
           processData: false,
+          crossDomain:params.crossDomain !== undefined ? params.crossDomain : false,
           error: function(json) {
             _that._requestError.call(_that, json, options.error);
           },
